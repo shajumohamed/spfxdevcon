@@ -1,7 +1,5 @@
-ARG SHAREPOINT_GENERATOR_VERSION=1.18.2
-ARG NODE_VERSION=18.19.0
-
-FROM node:${NODE_VERSION}
+#update the required node version in the below line
+FROM node:18.19.0
 
 EXPOSE 4321 35729 5432
 
@@ -16,6 +14,7 @@ RUN useradd --create-home --shell /bin/bash spfx && \
 
 USER spfx
 
-RUN npm i --location=global gulp-cli@2 yo @microsoft/generator-sharepoint@${SHAREPOINT_GENERATOR_VERSION}
+#update the required gulp yo and spfx generator version in the below line
+RUN npm i --location=global gulp-cli@2 yo @microsoft/generator-sharepoint@1.18.2
 
 CMD /bin/bash
