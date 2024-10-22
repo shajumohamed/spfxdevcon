@@ -20,6 +20,7 @@ if [ -f package.json ]; then
     echo -e "\n\e[1;94mNote:\e[0m To use the 'gulp serve' command, you need to copy and install the certificates locally."
     echo -e "Run 'bash ./.devcontainer/spfx-startup.sh' to provision certificates if not already done."
   else
+    echo -e "\n\e[1;94mNote:\e[0m To use the 'gulp serve' command, you need to copy and install the certificates locally."
     read -p "Do you want to provision certificates? (y/n): " cert_answer
     if [[ "$cert_answer" =~ ^[Yy]$ ]]; then
       bash ./.devcontainer/spfx-startup.sh
