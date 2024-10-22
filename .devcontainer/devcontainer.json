@@ -8,12 +8,16 @@
 			"SPFX_GENERATOR_VERSION": "1.20.0",
 			"NODE_VERSION": "18.20.4"
 		}
+	},	
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"editorconfig.editorconfig",
+				"dbaeumer.vscode-eslint"
+			]
+		}
 	},
-	"settings": {},
-	"extensions": [
-		"editorconfig.editorconfig",
-		"dbaeumer.vscode-eslint"
-	],
 	"forwardPorts": [
 		4321,
 		35729,
