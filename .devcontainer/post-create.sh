@@ -16,12 +16,16 @@ if [ ! -f package.json ]; then
 fi
 
 if [ -f package.json ]; then
-  echo -e "\n\e[1;94mNote:\e[0m To use the 'gulp serve' command, you need to provision certificates and copy and install them locally."
-  read -p "Do you want to provision certificates? (y/n): " cert_answer
-  if [[ "$cert_answer" =~ ^[Yy]$ ]]; then
-    bash ./.devcontainer/spfx-startup.sh
+  if [ -f spfx-dev-cert.pem ]; then
+    echo -e "\n\e[1;94mNote:\e[0m To use the 'gulp serve' command, you need to copy and install the certificates locally."
+    echo -e "Run 'bash ./.devcontainer/spfx-startup.sh' to provision certificates if not already done."
   else
-    echo "When you are ready, run 'bash ./.devcontainer/spfx-startup.sh' to provision certificates."
+    read -p "Do you want to provision certificates? (y/n): " cert_answer
+    if [[ "$cert_answer" =~ ^[Yy]$ ]]; then
+      bash ./.devcontainer/spfx-startup.sh
+    else
+      echo "When you are ready, run 'bash ./.devcontainer/spfx-startup.sh' to provision certificates."
+    fi
   fi
 fi
 
