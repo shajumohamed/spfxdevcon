@@ -5,7 +5,7 @@ A starter customizable template to quickly develop SPFx solutions.
 ## Steps to execute
 * Clone the repo into a dev container
 
-   [![Open in Remote - Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/SPFxDevcontainers/1.20.0)
+   [![Open in Remote - Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/shajumohamed/spfxdevcon)
 
 * Follow the instructions in terminal to create a new project and provision debug certificates.
 
